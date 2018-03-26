@@ -1,3 +1,6 @@
 # ecommerce
+
 ## Team
-* [Claudia Ligidakis] (https://github.com/claudialigidakis)
+
+* [Gavin Look](https://github.com/GTLook/)
+* [Claudia Ligidakis](https://github.com/claudialigidakis)
