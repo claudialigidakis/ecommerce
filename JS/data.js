@@ -1,3 +1,17 @@
+//user data to push into
+let userData = {
+  'order' : [],
+  'name' : '',
+  'email' : '',
+  'address' : '',
+  'city' : '',
+  'state' : '',
+  'zip' : ''
+
+}
+
+
+//product information
 let data = {
 
   'breakfast' : {
