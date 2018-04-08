@@ -59,7 +59,7 @@ let data = {
 
   'dessert' : {
     'Jaws Dropping Brownie' : {
-      'image' : images/brownieMug.jpg,
+      'image' : 'images/brownieMug.jpg',
       'price' : 9,
       'description' : 'hot chocolate decadent brownie'
     },
@@ -80,7 +80,7 @@ let data = {
     'Fishing for Donuts' : {
       'image' : url('https://s-media-cache-ak0.pinimg.com/originals/22/79/4b/22794b4da74028a5d574acde64f94718.jpg'),
       'price' : 5
-      'description' : 'A delightful combination of our signature coffee blend and d'
+      'description' : 'A delightful combination of our signature coffee blend and donut holes!'
     },
     'Fin & Tonic' : {
       'image' : url('http://a57.foxnews.com/images.foxnews.com/content/fox-news/food-drink/2017/08/07/iconic-moscow-mule-copper-mug-may-be-poisoning-drinkers/_jcr_content/par/featured_image/media-0.img.jpg/931/524/1502155847995.jpg?ve=1&tl=1&text=big-top-image'),
