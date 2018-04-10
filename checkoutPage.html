@@ -8,6 +8,7 @@
   <title>Checkout Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script defer src="JS/main.js"></script>
+  <script defer src="JS/checkout.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -38,16 +39,16 @@
           <div class="form-group row">
             <label for="first-name" class="col-2 col-form-label">Name</label>
             <div class="col-5">
-              <input class="form-control firstName" type="text" value="First Name">
+              <input class="form-control firstName" type="text" placeholder="First Name">
             </div>
             <div class="col-5">
-              <input class="form-control lastName" type="text" value="Last Name">
+              <input class="form-control lastName" type="text" placeholder="Last Name">
             </div>
           </div>
           <div class="form-group row">
-            <label for="customer-email" class="col-2 col-form-label email">Email</label>
+            <label for="customer-email" class="col-2 col-form-label">Email</label>
             <div class="col-10">
-              <input class="form-control" type="email" value="email@email.com">
+              <input class="form-control email" type="email" placeholder="email@email.com">
             </div>
           </div>
         </div>
@@ -58,25 +59,25 @@
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">Address</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="Street Address">
+              <input class="form-control" type="text" placeholder="Street Address">
             </div>
           </div>
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">City</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="City">
+              <input class="form-control" type="text" placeholder="City">
             </div>
           </div>
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">State</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="State">
+              <input class="form-control" type="text" placeholder="State">
             </div>
           </div>
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">Zip Code</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="Zip Code">
+              <input class="form-control" type="text" placeholder="Zip Code">
             </div>
           </div>
           <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
@@ -92,31 +93,31 @@
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">Address</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="Street Address">
+              <input class="form-control" type="text" placeholder="Street Address">
             </div>
           </div>
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">City</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="City">
+              <input class="form-control" type="text" placeholder="City">
             </div>
           </div>
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">State</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="State">
+              <input class="form-control" type="text" placeholder="State">
             </div>
           </div>
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">Zip Code</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="Zip Code">
+              <input class="form-control" type="text" placeholder="Zip Code">
             </div>
           </div>
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">Credit Card Number</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="Credit Card Number">
+              <input class="form-control" type="text" placeholder="Credit Card Number">
             </div>
           </div>
         </div>
@@ -153,10 +154,10 @@
         <!-- third column-->
         <div class="col-md-3" id="subscribe" <h3>Subscribe</h3>
           <form>
-            <input type="text" placeholder="Name" name="name" required>
-            <input type="email" placeholder="Email address" name="mail" required>
+            <input type="text" class="form-control" placeholder="Name" name="name" required>
+            <input type="email" class="form-control" placeholder="Email address" name="mail" required>
             <div class="container">
-              <input type="submit" value="Subscribe">
+              <input class='btn btn-primary' type="submit" placeholder="Subscribe">
             </div>
           </form>
         </div>
