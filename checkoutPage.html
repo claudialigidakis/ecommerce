@@ -8,6 +8,7 @@
   <title>Checkout Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script defer src="JS/main.js"></script>
+  <script defer src="JS/checkout.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -21,9 +22,9 @@
 
 <body>
   <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="productPage.html">Menu</a>
-      <img src="images/newimag.png" width="130" height="100" class="d-inline-block align-top" alt="">
-      <a class="navbar-brand" href="checkoutPage.html">Cart</a>
+    <a class="navbar-brand" href="productPage.html">Menu</a>
+    <img src="images/newimag.png" width="130" height="100" class="d-inline-block align-top" alt="">
+    <a class="navbar-brand" href="checkoutPage.html">Cart</a>
   </nav>
 
   <div class="row">
@@ -31,91 +32,101 @@
       <!-- checkout form -->
       <container>
         <h1> Checkout </h1>
-        <h2>1. Info</h2>
-        <div class="form-group row">
-          <label for="first-name" class="col-2 col-form-label">Name</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="First Name">
-            <input class="form-control" type="text" value="Last Name">
-          </div>
-
+        <div class="box">
+          <h3>1. Info</h3>
         </div>
-        <div class="form-group row">
-          <label for="customer-email" class="col-2 col-form-label">Email</label>
-          <div class="col-10">
-            <input class="form-control" type="email" value="email@email.com">
+        <div class="box info">
+          <div class="form-group row">
+            <label for="first-name" class="col-2 col-form-label">Name</label>
+            <div class="col-5">
+              <input class="form-control firstName" type="text" placeholder="First Name">
+            </div>
+            <div class="col-5">
+              <input class="form-control lastName" type="text" placeholder="Last Name">
+            </div>
           </div>
-        </div>
-        ---
-        <h2>Shipping information</h2>
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">Street address</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="Street address">
+          <div class="form-group row">
+            <label for="customer-email" class="col-2 col-form-label">Email</label>
+            <div class="col-10">
+              <input class="form-control email" type="email" placeholder="email@email.com">
+            </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">City</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="City">
+        <div class="box">
+          <h3>2. Shipping information</h3>
+        </div>
+        <div class="box shippingInfo d-none">
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Address</label>
+            <div class="col-10">
+              <input class="form-control" type="text" placeholder="Street Address">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">City</label>
+            <div class="col-10">
+              <input class="form-control" type="text" placeholder="City">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">State</label>
+            <div class="col-10">
+              <input class="form-control" type="text" placeholder="State">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Zip Code</label>
+            <div class="col-10">
+              <input class="form-control" type="text" placeholder="Zip Code">
+            </div>
+          </div>
+          <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+            <input type="checkbox">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Billing Address is the Same as Shipping</span>
+          </label>
+        </div>
+        <div class="box">
+          <h3>3. Billing information</h3>
+        </div>
+        <div class="box billingInfo d-none">
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Address</label>
+            <div class="col-10">
+              <input class="form-control" type="text" placeholder="Street Address">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">City</label>
+            <div class="col-10">
+              <input class="form-control" type="text" placeholder="City">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">State</label>
+            <div class="col-10">
+              <input class="form-control" type="text" placeholder="State">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Zip Code</label>
+            <div class="col-10">
+              <input class="form-control" type="text" placeholder="Zip Code">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Credit Card Number</label>
+            <div class="col-10">
+              <input class="form-control" type="text" placeholder="Credit Card Number">
+            </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">State</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="State">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">Zip Code</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="Zip Code">
-          </div>
-        </div>
-        <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-        <input type="checkbox">
-        <span class="custom-control-indicator"></span>
-        <span class="custom-control-description">Billing Address is the Same as Shipping</span>
-      </label> ---
-        <h2>Billing information</h2>
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">Street address</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="Street address">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">City</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="City">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">State</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="State">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">Zip Code</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="Zip Code">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">CC Card Number</label>
-          <div class="col-10">
-            <input class="form-control" type="text" value="Zip Code">
-          </div>
-        </div>
-        ---
-
       </container>
     </div>
     <!-- shopping cart -->
     <div class="col-6">
       <container>
-        <h1>shoppping cart</h1>
+        <h1>Shoppping Cart</h1>
         <!-- create box for dom here -->
       </container>
     </div>
@@ -125,7 +136,7 @@
     <div class="container-fluid text-center tex-md-left">
       <div class="row">
         <!-- first column-->
-        <div class="col-md-3" <h2>Social Media</h2>
+        <div class="col-md-3" <h3>Social Media</h3>
           <br>
           <a href="#" class="fa fa-facebook"></a>
           <a href="#" class="fa fa-twitter"></a>
@@ -133,7 +144,7 @@
         </div>
 
         <!-- second column-->
-        <div class="col-md-3" <h2>Visit Us</h2>
+        <div class="col-md-3" <h3>Visit Us</h3>
           <address>
               Box 564, Disneyland<br>
               USA
@@ -141,18 +152,18 @@
         </div>
 
         <!-- third column-->
-        <div class="col-md-3" id="subscribe" <h2>Subscribe</h2>
+        <div class="col-md-3" id="subscribe" <h3>Subscribe</h3>
           <form>
-            <input type="text" placeholder="Name" name="name" required>
-            <input type="email" placeholder="Email address" name="mail" required>
+            <input type="text" class="form-control" placeholder="Name" name="name" required>
+            <input type="email" class="form-control" placeholder="Email address" name="mail" required>
             <div class="container">
-              <input type="submit" value="Subscribe">
+              <input class='btn btn-primary' type="submit" placeholder="Subscribe">
             </div>
           </form>
         </div>
 
         <!-- fourth column-->
-        <div class="col-md-3" <h2>Website Map</h2>
+        <div class="col-md-3" <h3>Website Map</h3>
           <br>
           <a href="index.html">Home Page</a>
           <br>
