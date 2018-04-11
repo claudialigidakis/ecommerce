@@ -1,7 +1,10 @@
 /*body {
   margin-bottom: 60px;
 }*/
-
+#menu {
+  /*margin: inherit;*/
+  margin: 0px;
+}
 
 .footer {
   bottom: 0px;
@@ -41,7 +44,6 @@
 }
 
 h2 {
-  /*font-size: 100px;*/
   text-align: center;
 }
 

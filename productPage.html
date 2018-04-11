@@ -6,34 +6,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Product Page</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script defer src="JS/main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  <script defer src="JS/main.js"></script>
 
 </head>
 
 <body>
   <nav class="navbar navbar-light bg-light">
     <!-- <div class="navbar container"> -->
-      <a class="navbar-brand" href="index.html">Home</a>
-      <img src="images/newimag.png" width="130" height="100" class="d-inline-block align-top" alt="">
-      <a class="navbar-brand" href="checkoutPage.html">Cart</a>
+    <a class="navbar-brand" href="index.html">Home</a>
+    <img src="images/newimag.png" width="130" height="100" class="d-inline-block align-top" alt="">
+    <a class="navbar-brand" href="checkoutPage.html">Cart</a>
     <!-- </div> -->
   </nav>
-  <div class="container">
-  <h1>Products</h1>
-</div>
+
+  <div id="menu" class="container-fluid">
+      <div class="row">
+      <!-- menu items-->
+      <div class="col-md-3">
+        <div class="list-group">
+          <a href="#" class="list-group-item active">Breakfast</a>
+          <a href="#" class="list-group-item">Lunch</a>
+          <a href="#" class="list-group-item">Dessert</a>
+          <a href="#" class="list-group-item">Drinks</a>
+        </div>
+      </div>
+
+
+      <!-- products-->
+      <div class="col-md-9">
+        <h2>Shark Bites</h2>
+        <div class="container">
+          <div class="rowProducts"> yes
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            Details
+            <span class="details"></span>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container-fluid text-center tex-md-left">
       <div class="row">
         <!-- first column-->
-        <div class="col-md-3" <h2>Social Media</h2>
+        <div class="col-md-3" <h3>Social Media</h3>
           <br>
           <a href="#" class="fa fa-facebook"></a>
           <a href="#" class="fa fa-twitter"></a>
@@ -41,26 +78,26 @@
         </div>
 
         <!-- second column-->
-        <div class="col-md-3" <h2>Visit Us</h2>
+        <div class="col-md-3" <h3>Visit Us</h3>
           <address>
-              Box 564, Disneyland<br>
-              USA
-          </address>
+            Box 564, Disneyland<br>
+            USA
+        </address>
         </div>
 
         <!-- third column-->
-        <div class="col-md-3" id="subscribe" <h2>Subscribe</h2>
+        <div class="col-md-3" id="subscribe" <h3>Subscribe</h3>
           <form>
-            <input type="text" placeholder="Name" name="name" required>
-            <input type="email" placeholder="Email address" name="mail" required>
+            <input type="text" class="form-control" placeholder="Name" name="name" required>
+            <input type="email" class="form-control" placeholder="Email address" name="mail" required>
             <div class="container">
-              <input type="submit" value="Subscribe">
+              <input class='btn btn-primary' type="submit" placeholder="Subscribe">
             </div>
           </form>
         </div>
 
         <!-- fourth column-->
-        <div class="col-md-3" <h2>Website Map</h2>
+        <div class="col-md-3" <h3>Website Map</h3>
           <br>
           <a href="index.html">Home Page</a>
           <br>

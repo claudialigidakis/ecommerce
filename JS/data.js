@@ -12,9 +12,9 @@ let userData = {
 
 
 //product information
-let data = {
-
-  'breakfast' : {
+const products =
+  {
+    'breakfast' : {
     'Jawsome Breakfast Scramble' : {
       'image' : 'images/BreakfastScramble.jpg',
       'price' : 14,
@@ -30,7 +30,7 @@ let data = {
       'price' : 9,
       'description' : 'perk up any morning with this jar of grapefruit'
     },
-    'Buna-Buna-Buna bread' ; {
+    'Buna-Buna-Buna bread' : {
       'image' : url('http://tiphero.com/wp-content/uploads/2017/05/Still_3_Banana_Bread_Mug.jpg'),
       'price' : 12,
       'description' : 'watch out for this addicting banana bread'
@@ -79,7 +79,7 @@ let data = {
   'drinks' : {
     'Fishing for Donuts' : {
       'image' : url('https://s-media-cache-ak0.pinimg.com/originals/22/79/4b/22794b4da74028a5d574acde64f94718.jpg'),
-      'price' : 5
+      'price' : 5,
       'description' : 'A delightful combination of our signature coffee blend and donut holes!'
     },
     'Fin & Tonic' : {
