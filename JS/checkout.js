@@ -2,44 +2,67 @@
 const info = document.querySelector('.info')
 const shippingInfo = document.querySelector('.shippingInfo')
 const billingInfo = document.querySelector('.billingInfo')
+const confirmInfo = document.querySelector('.confirmInfo')
 
-//declare HTML form links
-const firstName = document.querySelector('.firstName')
-const lastName = document.querySelector('.lastName')
-const email = document.querySelector('.email')
-//link arrows
-const infoUp = document.querySelector('.infoUp')
-const infoDown = document.querySelector('.infoDown')
-const shipUp = document.querySelector('.shipUp')
-const shipDown = document.querySelector('.shipDown')
-const billUp = document.querySelector('.billUp')
-const billDown = document.querySelector('.billDown')
+//link navigator buttons
+const infoShow = document.querySelector('.infoShow')
+const shipShow = document.querySelector('.shipShow')
+const billShow = document.querySelector('.billShow')
+const confirmShow = document.querySelector('.confirmShow')
 
-//functions
-const validateInfo = (key) => {
-  if (firstName.value !== '' && lastName.value !== '' &&
-    email.value !== '') {
-      if(key.keyCode == 13 || key.keyCode == 9){
-        info.classList.add('d-none')
-        shippingInfo.classList.remove('d-none')
-    }
-  }
-}
+// checkbox
+const rememberMe = document.querySelector('#rememberMe')
+const sameBilling = document.querySelector('#sameBilling')
 
-//Info form listners
-firstName.addEventListener('keydown', validateInfo)
-lastName.addEventListener('keydown', validateInfo)
-email.addEventListener('keydown', validateInfo)
-infoDown.addEventListener('click',() => {
-  info.classList.add('d-none')
-  shippingInfo.classList.remove('d-none')
-})
-
-//shipping info listeners
-shipDown.addEventListener('click',() => {
-  shippingInfo.classList.add('d-none')
-  billingInfo.classList.remove('d-none')
-})
-shipUp.addEventListener('click',() => {
+//navigation info listeners
+infoShow.addEventListener('click',(event) => {
+  event.preventDefault()
   info.classList.remove('d-none')
   shippingInfo.classList.add('d-none')
+  billingInfo.classList.add('d-none')
+  confirmInfo.classList.add('d-none')
+})
+shipShow.addEventListener('click',(event) => {
+  event.preventDefault()
+  info.classList.add('d-none')
+  shippingInfo.classList.remove('d-none')
+  billingInfo.classList.add('d-none')
+  confirmInfo.classList.add('d-none')
+})
+billShow.addEventListener('click',(event) => {
+  event.preventDefault()
+  info.classList.add('d-none')
+  shippingInfo.classList.add('d-none')
+  billingInfo.classList.remove('d-none')
+  confirmInfo.classList.add('d-none')
+})
+confirmShow.addEventListener('click',(event) => {
+  event.preventDefault()
+  info.classList.add('d-none')
+  shippingInfo.classList.add('d-none')
+  billingInfo.classList.add('d-none')
+  confirmInfo.classList.remove('d-none')
+})
+
+//listen for form and record user user
+document.querySelector('form').addEventListener('submit', (event) => {
+  event.preventDefault()
+
+  const user = {}
+  user.name = event.target['first-name'].value
+  user.email = event.target['email'].value
+  user.rememberMe = event.target['rememberMe'].value
+  user.shipAddress = event.target['shipAddress'].value
+  user.shipZip = event.target['shipCity'].value
+  user.shipState = event.target['shipState'].value
+  user.shipZip = event.target['shipZip'].value
+  user.sameBilling = event.target['sameBilling'].value
+  user.billAddress = event.target['shipAddress'].value
+  user.billZip = event.target['shipCity'].value
+  user.billState = event.target['shipState'].value
+  user.billZip = event.target['shipZip'].value
+})
+
+const rememberMeFunct = () {
+
+}
