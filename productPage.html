@@ -12,9 +12,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script defer src="/JS/data.js"></script>
+  <script defer src="/JS/helper.js"></script>
+  <script defer src="/JS/classes/CartList.js"></script>
+  <script defer src="/JS/classes/ProductList.js"></script>
+  <script defer src="/JS/app.js"></script>
+  <script defer src="/JS/main.js"></script>
+
+
   <link rel="stylesheet" type="text/css" href="CSS/styles.css">
   <script defer src="JS/main.js"></script>
-  <script defer src="JS/app.js"></script>
 </head>
 
 <body>
@@ -22,25 +29,18 @@
     <!-- <div class="navbar container"> -->
     <a class="navbar-brand" href="index.html">Home</a>
     <img src="images/newimag.png" width="130" height="100" class="d-inline-block align-top" alt="">
-    <a class="navbar-brand" href="checkoutPage.html">Cart</a>
+    <a class="navbar-brand" href="checkoutPage.html">Cart(<span id="cartcounter"></span>)</a>
     <!-- </div> -->
   </nav>
 
+
   <div id="menu" class="container-fluid">
-      <div class="row">
+    <div class="row">
       <!-- menu items-->
-      <div class="col-md-3">
-        <div class="list-group">
-          <a href="#" class="list-group-item active">Breakfast</a>
-          <a href="#" class="list-group-item">Lunch</a>
-          <a href="#" class="list-group-item">Dessert</a>
-          <a href="#" class="list-group-item">Drinks</a>
-        </div>
-      </div>
 
 
       <!-- products-->
-      <div class="col-md-9">
+      <div class="col-md">
         <h2>Shark Bites</h2>
         <div class="container">
           <div class="products"> yes
@@ -49,22 +49,28 @@
       </div>
 
 
-    </div>
-  </div>
-
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
-            Details
-            <span class="details"></span>
-          </h4>
+      <div class="col-md-3">
+        <br>
+        <br>
+        <div class="list-group">
+          <a href="#" class="list-group-item active">Breakfast</a>
+          <a href="#" class="list-group-item">Lunch</a>
+          <a href="#" class="list-group-item">Dessert</a>
+          <a href="#" class="list-group-item">Drinks</a>
+        </div>
+<br>
+<br>
+    <container>
+      <div class="creditCardForm">
+        <h1>Shoppping Cart</h1>
+        <div class="cart">
+          <!-- render here -->
         </div>
       </div>
-    </div>
-  </section>
+    </container>
+  </div>
+  </div>
+</div>
 
   <footer class="footer">
     <div class="container-fluid text-center tex-md-left">
