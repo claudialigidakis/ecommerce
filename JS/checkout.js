@@ -51,18 +51,18 @@ document.querySelector('form').addEventListener('submit', (event) => {
   const user = {}
   user.name = event.target['first-name'].value
   user.email = event.target['email'].value
-  user.rememberMe = event.target['rememberMe'].value
+  // user.rememberMe = event.target['rememberMe'].value
   user.shipAddress = event.target['shipAddress'].value
   user.shipZip = event.target['shipCity'].value
   user.shipState = event.target['shipState'].value
   user.shipZip = event.target['shipZip'].value
-  user.sameBilling = event.target['sameBilling'].value
+  // user.sameBilling = event.target['sameBilling'].value
   user.billAddress = event.target['shipAddress'].value
   user.billZip = event.target['shipCity'].value
   user.billState = event.target['shipState'].value
   user.billZip = event.target['shipZip'].value
 })
 
-const rememberMeFunct = () {
-
+const rememberMeFunct = () => {
+  
 }
