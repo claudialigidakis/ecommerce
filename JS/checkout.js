@@ -15,7 +15,7 @@ const rememberMe = document.querySelector('#rememberMe')
 const sameBilling = document.querySelector('#sameBilling')
 
 //navigation info listeners
-infoShow.adddocumentListener('click',(event) => {
+infoShow.addEventListener('click',(event) => {
   event.preventDefault()
   info.classList.remove('d-none')
   shippingInfo.classList.add('d-none')
@@ -74,7 +74,7 @@ document.querySelector('#sameBilling').addEventListener("click", () => {
     document.target['billState'].value = document.target['shipState'].value
     document.target['billZip'].value = document.target['shipZip'].value
   }
-}
+})
 
 JSON.parse(localStorage.getItem('data'))
 
