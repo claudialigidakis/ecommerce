@@ -15,7 +15,7 @@ const rememberMe = document.querySelector('#rememberMe')
 const sameBilling = document.querySelector('#sameBilling')
 
 //navigation info listeners
-infoShow.addEventListener('click',(event) => {
+infoShow.adddocumentListener('click',(event) => {
   event.preventDefault()
   info.classList.remove('d-none')
   shippingInfo.classList.add('d-none')
@@ -45,24 +45,47 @@ confirmShow.addEventListener('click',(event) => {
 })
 
 //listen for form and record user user
+  const user = {}
+  const userPay = {}
 document.querySelector('form').addEventListener('submit', (event) => {
   event.preventDefault()
 
-  const user = {}
   user.name = event.target['first-name'].value
   user.email = event.target['email'].value
-  // user.rememberMe = event.target['rememberMe'].value
+  user.rememberMe = event.target['rememberMe'].checked
   user.shipAddress = event.target['shipAddress'].value
   user.shipZip = event.target['shipCity'].value
   user.shipState = event.target['shipState'].value
   user.shipZip = event.target['shipZip'].value
-  // user.sameBilling = event.target['sameBilling'].value
-  user.billAddress = event.target['shipAddress'].value
-  user.billZip = event.target['shipCity'].value
-  user.billState = event.target['shipState'].value
-  user.billZip = event.target['shipZip'].value
+  user.sameBilling = event.target['sameBilling'].checked
+  userPay.billAddress = event.target['billAddress'].value
+  userPay.billCity = event.target['billCity'].value
+  userPay.billZip = event.target['billCity'].value
+  userPay.billState = event.target['billState'].value
+  userPay.billZip = event.target['billZip'].value
+  if(user.rememberMe) localStorage.setItem('data',JSON.stringify(user))
 })
 
-const rememberMeFunct = () => {
-  
+document.querySelector('#sameBilling').addEventListener("click", () => {
+  if(document.target['sameBilling'].checked){
+    document.target['billAddress'].value = document.target['shipAddress'].value
+    document.target['billCity'].value = document.target['shipCity'].value
+    document.target['billCity'].value = document.target['shipCity'].value
+    document.target['billState'].value = document.target['shipState'].value
+    document.target['billZip'].value = document.target['shipZip'].value
+  }
 }
+
+JSON.parse(localStorage.getItem('data'))
+
+// const rememberMeFunct = (user.rememberMe) => {
+//
+//     document.target['first-name'].value =
+//     document.target['email'].value
+//     document.target['rememberMe'].checked
+//     document.target['shipAddress'].value
+//     document.target['shipCity'].value
+//     document.target['shipState'].value
+//     document.target['sameBilling'].checked
+//   }
+// }
