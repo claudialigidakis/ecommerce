@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta required id="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Checkout Page</title>
 
@@ -49,18 +49,18 @@
             <div class="box info">
               <div class="form-group row justify-content-center">
                 <div class="col-10">
-                  <label for="first-name" class=" col-form-label">Customer Name</label>
-                  <input class="form-control Name" type="text" placeholder="name" name="first-name">
+                  <label for="name" class=" col-form-label">Customer Name</label>
+                  <input class="form-control Name" type="text" placeholder="name" required id="name">
                 </div>
               </div>
               <div class="form-group row justify-content-center">
                 <div class="col-10 ">
                   <label for="customer-email" class=" col-form-label">Cusomter Email</label>
-                  <input class="form-control email" type="email" name=email placeholder="email@email.com">
+                  <input class="form-control email" type="email" required id=email placeholder="email@email.com">
                 </div>
               </div>
               <label class="custom-control custom-checkbox mb-2">
-                <input type="checkbox" name='rememberMe' id='rememberMe'>
+                <input type="checkbox" id='rememberMe'>
                 <span class="custom-control-indicator"></span>
                 <span class="custom-control-description">Remember me! I'll be back</span>
               </label>
@@ -79,29 +79,29 @@
               <div class="form-group row">
                 <div class="col-10">
                   <label for="example-text-input" class="col-form-label">Address</label>
-                  <input class="form-control" type="text" placeholder="Street Address" name='shipAddress'>
+                  <input class="form-control" type="text" placeholder="Street Address" required id='shipAddress'>
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-10">
                   <label for="example-text-input" class=" col-form-label">City</label>
-                  <input class="form-control" type="text" placeholder="City" name='shipCity'>
+                  <input class="form-control" type="text" placeholder="City" required id='shipCity'>
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-10">
                   <label for="example-text-input" class=" col-form-label" >State</label>
-                  <input class="form-control" type="text" placeholder="State" name='shipState'>
+                  <input class="form-control" type="text" placeholder="State" required id='shipState'>
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-10">
                   <label for="example-text-input" class=" col-form-label">Zip Code</label>
-                  <input class="form-control" type="text" placeholder="Zip Code" name='shipZip'>
+                  <input class="form-control" type="number" placeholder="Zip Code" required id='shipZip'>
                 </div>
               </div>
-              <label class="custom-control custom-checkbox mb-2">
-                <input type="checkbox" name='sameBilling' id='sameBilling'>
+              <label class="custom-control custom-checkbox mb-2" >
+                <input type="checkbox" id='sameBilling'>
                 <span class="custom-control-description">Billing Address is the Same as Shipping</span>
               </label>
             </div>
@@ -119,66 +119,40 @@
               <div class="form-group row">
                 <div class="col-12">
                   <label for="address-text-input" class=" col-form-label">Address</label>
-                  <input class="form-control" type="text" placeholder="Street Address" name='billAddress'>
+                  <input class="form-control" type="text" placeholder="Street Address" required id='billAddress'>
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-12">
                   <label for="city-text-input" class=" col-form-label">City</label>
-                  <input class="form-control" type="text" placeholder="City" name='billCity'>
+                  <input class="form-control" type="text" placeholder="City" required id='billCity'>
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-6">
                   <label for="example-text-input" class=" col-form-label">State</label>
-                  <input class="form-control" type="text" placeholder="State" name='billState'>
+                  <input class="form-control" type="text" placeholder="State" required id='billState'>
                 </div>
                 <div class="col-6">
                   <label for="zip code" class=" col-form-label">Zip Code</label>
-                  <input class="form-control" type="text" placeholder="Zip Code" name='billZip'>
+                  <input class="form-control" type="number" placeholder="Zip Code" required id='billZip'>
                 </div>
-
-                <!-- inserted CC validation code here -->
-
-                <!-- <div>
-                  <span class="field">
-                     <label for="ccnum">Card Number</label>
-                     <input placeholder="" type="tel" size="19" name="ccnum" value="" id="ccnum">
-                   </span>
-                  <div><small>type: <strong id="ccnum-type">invalid</strong></small></div>
-                </div> -->
-
-                <!-- <div>
-                  <span class="field">
-                     <label for="expiry">Expiration</label>
-                     <input placeholder=" /" size="7" type="tel" name="expiry" value="" id="expiry">
-                   </span>
-
-                  <span class="cvc field">
-                   <label for="cvc">CVC</label>
-                  <input placeholder="-" size="4" type="tel" name="cvc" value="" id="cvc">
-                  </span>
-                </div>
-
-                <div>
-                  <button id="submit">Validate</button>
-                  <div id="result" class="emoji"></div>
-                </div> -->
 
                 <div class="payment">
                   <div class="form-group owner">
                     <label for="owner">Name on Card</label>
-                    <input type="text" class="form-control" placeholder='Name on Card' id="owner"  name='cardName'>
+                    <input type="text" class="form-control" placeholder='Name on Card'  required id='cardName'>
                   </div>
                   <div class="form-group CVV">
                     <label for="cvv">CVV</label>
-                    <input type="text" placeholder='CVV' class="form-control" id="cvv" name='cardCVV'>
+                    <input type="number" placeholder='CVV' class="form-control"required id='cardCVV'>
                   </div>
                   <div class="form-group" id="card-number-field">
                     <label for="cardNumber">Card Number</label>
-                    <input type="text" class="form-control" placeholder='Card Number' id="cardNumber" name='cardNumber'>
+                    <input type="number" class="form-control" placeholder='Card Number' required id='cardNumber'>
+                    <span id='ccError' class='d-none'>Please Enter a valid Number</span>
                   </div>
-                  <div class="form-group row justify-content-center" id="expiration-date" name='cardExMonth'>
+                  <div class="form-group row justify-content-center" id="expiration-date" required >
                     <label>Expiration Date</label>
                     <select>
                     <option value="01">January</option>
@@ -220,8 +194,10 @@
               </div>
             </div>
           </div>
-          <div class="box d-none confirmInfo">
-            list adress here
+          <div class="box d-none confirmInfo justify-content-center">
+            <h4 class='text-center confirmShow'>Thank you for you order!</h4>
+            <div class="text-justify-left" id='recipt'></div>
+            <button type="button">Confirm my Order!</button>
           </div>
         </div>
       </container>
@@ -259,8 +235,8 @@
         <!-- third column-->
         <div class="col-md-3" id="subscribe">Subscribe
           <form>
-            <input type="text" class="form-control" placeholder="Name" name="name" required>
-            <input type="email" class="form-control" placeholder="Email address" name="mail" required>
+            <input type="text" class="form-control" placeholder="Name" required name="name" required>
+            <input type="email" class="form-control" placeholder="Email address" required name="mail" required>
             <div class="container">
               <input class='btn btn-primary' type="submit" placeholder="Subscribe">
             </div>
