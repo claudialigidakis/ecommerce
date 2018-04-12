@@ -1,7 +1,7 @@
-document.querySelector(".text").addEventListener("click", function() {
-  console.log('yes')
-  //this is where we will move things into cart
-});
+// document.querySelector(".text").addEventListener("click", function() {
+//   console.log('yes')
+//   //this is where we will move things into cart
+// });
 
 let form = document.querySelector('form')
 
