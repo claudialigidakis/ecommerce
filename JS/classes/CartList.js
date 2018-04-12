@@ -84,9 +84,10 @@ class CartList{
     return Object.values(this.cart).reduce((acc, ele) => acc + ele.quantity,0)
   }
 
+
   // impure method
   render(){
-
+    document.querySelector('#cartcounter').innerHTML = `${this.calculateTotalItems()}`
     const sortedByIndexCart = Object.values(this.cart).sort((a,b) => a.index - b.index)
 
     const cartIncludingTotal = [...sortedByIndexCart.map((product) =>

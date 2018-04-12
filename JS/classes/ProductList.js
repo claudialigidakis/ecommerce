@@ -12,6 +12,7 @@ class ProductList{
     const img = document.createElement('img')
     addClassesToElement(img, 'card-img-top')
     img.src = cardData.image
+    img.style = "width:100%;height:450px;"
     card.appendChild(img)
     img.addEventListener('click',function (){
       let itemDescription = document.querySelector('.details')

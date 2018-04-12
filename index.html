@@ -15,6 +15,11 @@
   <link rel="stylesheet" type="text/css" href="CSS/styles.css">
   <script defer src="JS/main.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script defer src="/JS/data.js"></script>
+  <script defer src="/JS/helper.js"></script>
+  <script defer src="/JS/classes/CartList.js"></script>
+  <script defer src="/JS/classes/ProductList.js"></script>
+  <script defer src="/JS/app.js"></script>
 
 </head>
 
@@ -22,7 +27,7 @@
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="productPage.html">Menu</a>
     <img src="images/newimag.png" width="130" height="100" class="d-inline-block align-top" alt="">
-    <a class="navbar-brand" href="checkoutPage.html">Cart</a>
+    <a class="navbar-brand" href="checkoutPage.html">Cart(<span id="cartcounter">0</span>)</a>
   </nav>
 
   <container>
@@ -34,13 +39,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
+          <img class="d-block w-100" style="height:800px;" src="images/brownieMug.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
           <img class="d-block w-100" style="height:800px;" src="images/pizzaInaMug.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" style="height:800px;" src="images/burritoMug.jpg" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" style="height:800px;" src="images/brownieMug.jpg" alt="Third slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -64,9 +69,9 @@
       <h2>Featured Shark Bites</h2>
       <div class="row">
 
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="col-lg col-md mb-4">
           <div class="card">
-            <a href="#"><img class="card-img-top" style="width:375px;height:250px;" src="images/BreakfastScramble.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" style="width:100%;height:250px;" src="images/BreakfastScramble.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
               <a href="#">Jawsome Breakfast Scramble</a>
@@ -80,9 +85,9 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="col-lg col-md mb-4">
           <div class="card">
-            <a href="#"><img class="card-img-top" style="width:375px;height:250px;" src="images/pizzaInaMug.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" style="width:100%;height:250px;" src="images/pizzaInaMug.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
                         <a href="#">Fin-tastic Pizza</a>
@@ -96,31 +101,15 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="col-lg col-md mb-4">
           <div class="card">
-            <a href="#"><img class="card-img-top" style="width:375px;height:250px;" src="https://www.kitchentreaty.com/wp-content/uploads/2016/03/chocolate-mint-mug-cake-sq-660x430.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" style="width:100%;height:250px;" src="https://www.kitchentreaty.com/wp-content/uploads/2016/03/chocolate-mint-mug-cake-sq-660x430.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
                         <a href="#">Fin Mint Chocolate Cake</a>
                       </h4>
               <h5>$11</h5>
               <p class="card-text">hot chocolate cake garnished with mint</p>
-              <div class="middle">
-                <div class="text">Add to Cart</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <a href="#"><img class="card-img-top" style="width:375px;height:250px;" src="https://s-media-cache-ak0.pinimg.com/originals/22/79/4b/22794b4da74028a5d574acde64f94718.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                        <a href="#">Fishing for Donuts</a>
-                      </h4>
-              <h5>$24.99</h5>
-              <p class="card-text">A delightful combination of our signature coffee blend and donut holes!</p>
               <div class="middle">
                 <div class="text">Add to Cart</div>
               </div>

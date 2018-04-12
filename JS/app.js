@@ -5,12 +5,13 @@ function addToCartEventHandler(cart){
   }
 }
 
+
 const myCart = new CartList(
                       document.querySelector('.cart')
                     )
 
 const myProducts = new ProductList(
-                        products, // from products.js
+                        products,
                         document.querySelector('.products'),
                         addToCartEventHandler(myCart)
                       )
