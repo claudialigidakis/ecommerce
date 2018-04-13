@@ -1,3 +1,11 @@
+
+let subscription = document.querySelector('#subscription')
+subscription.addEventListener("submit", function(event) {
+  subscription.innerHTML = "Congrats you are now in the loop for all future SharkBite News!"
+  event.preventDefault();
+})
+
+
 function addToCartEventHandler(cart) {
   return function(item) {
     cart.addItemToCart(item)
@@ -18,12 +26,6 @@ const myProducts = new ProductList(
 // start rendering page
 myProducts.render()
 
-
-
-document.querySelector('form').addEventListener("submit", function(event) {
-  event.preventDefault()
-  form.innerHTML = "Congrats you are now in the loop for all future SharkBite News!"
-})
 
 const productList = document.querySelector('.products')
 // let allproducts = for (let i = 0; i < productsList.length; i++) {

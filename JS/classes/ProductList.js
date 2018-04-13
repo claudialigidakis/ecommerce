@@ -1,6 +1,7 @@
 class ProductList{
   constructor(items, elementToRenderIn, cb){
     this.items = items
+    console.log(elementToRenderIn);
     this.elementToRenderIn = elementToRenderIn
     this.eventHandler = cb
   }
@@ -55,6 +56,7 @@ class ProductList{
     const renderedProductsArray = this.items.map(product => ProductList.renderCard(product, this.eventHandler))
 
     // modifying the DOM
+    console.log(this.elementToRenderIn)
     empty(this.elementToRenderIn)
     appendChildrenArray(this.elementToRenderIn, renderedProductsArray)
   }
